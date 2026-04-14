@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from typing import List
 
 # Impor Blueprint uud.py
@@ -56,3 +56,14 @@ def read_root():
 @app.get("/pasal", response_model=List[Pasal])
 def get_semua_pasal():
     return MOCK_PASAL
+
+#Endpoint untuk memanggil pasal berdasarkan nomor
+@app.get("/pasal/{nomor}", response_model=Pasal)
+def get_pasal_by_nomor(nomor: str):
+    # Mencari pasal yang diminta didalam MOCK_PASAL
+    for p in MOCK_PASAL:
+        if p.nomor == nomor:
+            return p
+
+    #jika loop selesai dan pasal tidak ditemukan Berikan error 404
+    raise HTTPException(status_code=404, detail="Pasal tidak ditemukan")
