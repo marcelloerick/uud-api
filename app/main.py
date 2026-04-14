@@ -67,3 +67,20 @@ def get_pasal_by_nomor(nomor: str):
 
     #jika loop selesai dan pasal tidak ditemukan Berikan error 404
     raise HTTPException(status_code=404, detail="Pasal tidak ditemukan")
+
+# Endpoint Baru: Pencarian berdasarkan kata kunci
+# URL nanti akan menjadi: /cari?kata_kunci=sesuatu
+@app.get("/cari", response_model=List[Pasal])
+def cari_pasal(kata_kunci: str):
+    hasil_pencarian = []
+
+    #Bedah 1 per 1 isi MOCK_PASAL
+    for pasal in MOCK_PASAL:
+        # 1 Pasal punya banyak ayat, maka bedah ayatnya juga
+        for ayat in pasal.ayat:
+            #ubah ke huruf kecil agar tidak sensitif huruf
+            if kata_kunci.lower() in ayat.teks.lower():
+                hasil_pencarian.append(pasal)
+                break # jika ketemu di 1 ayat, langsung masukkan dan stop mencari
+    
+    return hasil_pencarian
