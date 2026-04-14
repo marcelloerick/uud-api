@@ -1,0 +1,49 @@
+[
+    {
+        "nomor": "1",
+        "ayat": [
+            {
+                "nomor": "1",
+                "teks": "Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik."
+            },
+            {
+                "nomor": "2",
+                "teks": "Kedaulatan berada di tangan rakyat dan dilaksanakan menurut Undang-Undang Dasar."
+            },
+            {
+                "nomor": "3",
+                "teks": "Negara Indonesia adalah negara hukum."
+            }
+        ]
+    },
+    {
+        "nomor": "2",
+        "ayat": [
+            {
+                "nomor": "1",
+                "teks": "Majelis Permusyawaratan Rakyat terdiri atas anggota Dewan Perwakilan Rakyat dan anggota Dewan Perwakilan Daerah yang dipilih melalui pemilihan umum dan diatur lebih lanjut dengan undang-undang."
+            },
+            {
+                "nomor": "2",
+                "teks": "Majelis Permusyawaratan Rakyat bersidang sedikitnya sekali dalam lima tahun di ibu kota negara."
+            },
+            {
+                "nomor": "3",
+                "teks": "Segala putusan Majelis Permusyawaratan Rakyat ditetapkan dengan suara yang terbanyak."
+            }
+        ]
+    },
+    {
+        "nomor": "4",
+        "ayat": [
+            {
+                "nomor": "1",
+                "teks": "Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar."
+            },
+            {
+                "nomor": "2",
+                "teks": "Dalam melakukan kewajibannya Presiden dibantu oleh satu orang Wakil Presiden."
+            }
+        ]
+    }
+]
